@@ -1,0 +1,125 @@
+<%- include('../layout/header') %>
+
+<section class="container py-5" style="margin-top:120px;">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h4>Edit Program Donasi</h4>
+
+</div>
+
+<div class="card-body">
+
+<form action="/program/edit/<%= program.id %>" method="POST" enctype="multipart/form-data">
+
+<div class="mb-3">
+
+<label class="form-label">Nama Program</label>
+
+<input
+type="text"
+name="nama_program"
+class="form-control"
+value="<%= program.nama_program %>"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">Deskripsi</label>
+
+<textarea
+name="deskripsi"
+rows="4"
+class="form-control"
+required><%= program.deskripsi %></textarea>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">Target Donasi</label>
+
+<input
+type="number"
+name="target_donasi"
+class="form-control"
+value="<%= program.target_donasi %>"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">Status</label>
+
+<select
+name="status"
+class="form-select">
+
+<option value="Aktif"
+<%= program.status=="Aktif" ? "selected" : "" %>>
+
+Aktif
+
+</option>
+
+<option value="Nonaktif"
+<%= program.status=="Nonaktif" ? "selected" : "" %>>
+
+Nonaktif
+
+</option>
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Ganti Gambar (Opsional)
+
+</label>
+
+<input
+type="file"
+name="gambar"
+class="form-control">
+
+</div>
+
+<button class="btn btn-primary">
+
+Update Program
+
+</button>
+
+<a href="/program"
+class="btn btn-secondary">
+
+Kembali
+
+</a>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<%- include('../layout/footer') %>

@@ -1,0 +1,153 @@
+<%- include('../layout/header') %>
+
+<section class="container py-5" style="margin-top:120px;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold">
+            Program Donasi
+        </h2>
+
+        <p class="text-muted mb-0">
+            Daftar seluruh program donasi.
+        </p>
+    </div>
+
+    <div class="d-flex gap-2">
+
+        <a href="/admin" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i>
+            Dashboard
+        </a>
+
+        <a href="/program/tambah" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i>
+            Tambah Program
+        </a>
+
+    </div>
+
+</div>
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover align-middle">
+
+                    <thead class="table-dark text-center">
+
+                        <tr>
+
+                            <th>No</th>
+                            <th>Nama Program</th>
+                            <th>Target</th>
+                            <th>Terkumpul</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <% if(program.length > 0){ %>
+
+                        <% program.forEach((item,index)=>{ %>
+
+                        <tr>
+
+                            <td class="text-center">
+                                <%= index+1 %>
+                            </td>
+
+                            <td>
+                                <strong><%= item.nama_program %></strong>
+                            </td>
+
+                            <td>
+                                Rp <%= Number(item.target_donasi).toLocaleString('id-ID') %>
+                            </td>
+
+                            <td>
+                                Rp <%= Number(item.dana_terkumpul).toLocaleString('id-ID') %>
+                            </td>
+
+                            <td class="text-center">
+
+                                <% if(item.status=="Aktif"){ %>
+
+                                    <span class="badge bg-success">
+
+                                        Aktif
+
+                                    </span>
+
+                                <% }else{ %>
+
+                                    <span class="badge bg-secondary">
+
+                                        Nonaktif
+
+                                    </span>
+
+                                <% } %>
+
+                            </td>
+
+                            <td class="text-center">
+
+                                <a href="/program/edit/<%= item.id %>" class="btn btn-primary btn-sm">
+
+                                    <i class="bi bi-pencil-square"></i>
+
+                                         Edit
+
+                                </a>
+                                <a
+                                    href="/program/hapus/<%= item.id %>"
+                                    class="btn btn-danger btn-sm"
+                                     onclick="return confirm('Yakin ingin menghapus program ini?')">
+
+                                      <i class="bi bi-trash"></i>
+
+                                         Hapus
+
+                                        </a>
+                            </td>
+
+                        </tr>
+
+                        <% }) %>
+
+                    <% }else{ %>
+
+                        <tr>
+
+                            <td colspan="6" class="text-center">
+
+                                Belum ada program.
+
+                            </td>
+
+                        </tr>
+
+                    <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<%- include('../layout/footer') %>

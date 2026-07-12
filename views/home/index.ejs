@@ -1,0 +1,558 @@
+<%- include('../layout/header') %>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-section">
+
+<div class="hero-overlay"></div>
+
+<div class="container position-relative">
+
+<div class="row align-items-center gy-5">
+
+<!-- ================= LEFT ================= -->
+
+<div class="col-lg-6" data-aos="fade-right">
+
+<span class="badge-soft">
+
+<i class="bi bi-patch-check-fill me-2"></i>
+
+Yayasan Sosial Resmi & Terpercaya
+
+</span>
+
+<h1 class="hero-title mt-4">
+
+Merawat Harapan,
+
+<span class="text-gradient">
+
+Membangun Masa Depan
+
+</span>
+
+Anak-anak Desa Sumber Asri
+
+</h1>
+
+<p class="hero-desc">
+
+Setiap donasi yang Anda berikan menjadi langkah nyata
+untuk membantu pendidikan, kesehatan, serta kehidupan
+yang lebih baik bagi anak-anak yatim dan dhuafa.
+
+</p>
+
+<div class="d-flex flex-wrap gap-3 mt-4">
+
+<a href="/donasi" class="btn btn-donasi btn-lg">
+
+<i class="bi bi-heart-fill me-2"></i>
+
+Donasi Sekarang
+
+</a>
+
+<a href="#tentang" class="btn btn-outline-custom btn-lg">
+
+<i class="bi bi-play-circle me-2"></i>
+
+Pelajari Lebih Lanjut
+
+</a>
+
+</div>
+
+<!-- Statistik -->
+
+<div class="hero-trust mt-5">
+
+<div class="trust-item">
+
+<strong>18+</strong>
+
+<span>Tahun Mengabdi</span>
+
+</div>
+
+<div class="trust-item">
+
+<strong><%= totalDonatur %></strong>
+
+<span>Donatur Aktif</span>
+
+</div>
+
+<div class="trust-item">
+
+<strong>120+</strong>
+
+<span>Anak Terbantu</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT ================= -->
+
+<div class="col-lg-6 text-center" data-aos="fade-left">
+
+<img
+    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=900&auto=format&fit=crop"
+    class="img-fluid hero-image"
+    alt="Anak Panti">
+
+<!-- Floating Card -->
+
+<div class="floating-card shadow-lg">
+
+<div class="d-flex align-items-center">
+
+<div class="floating-icon">
+
+<i class="bi bi-heart-fill"></i>
+
+</div>
+
+<div>
+
+<h5 class="mb-1">
+
+Rp <%= Number(totalDana).toLocaleString('id-ID') %>
+
+</h5>
+
+<small>
+
+Dana Donasi Terkumpul
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATISTIK ================= -->
+
+<section class="stats-section py-5">
+
+<div class="container">
+
+<div class="row g-4 text-center">
+
+<div class="col-lg-3 col-6">
+
+<div class="stats-card">
+
+<div class="stats-icon">
+
+<i class="bi bi-cash-stack"></i>
+
+</div>
+
+<h2 class="counter">
+<%= Math.round(totalDana/1000000) %>
+</h2>
+
+<p>Juta Rupiah Donasi</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stats-card">
+
+<div class="stats-icon">
+
+<i class="bi bi-people-fill"></i>
+
+</div>
+
+<h2 class="counter">
+<%= totalDonatur %>
+</h2>
+
+<p>Donatur Aktif</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stats-card">
+
+<div class="stats-icon">
+
+<i class="bi bi-heart-fill"></i>
+
+</div>
+
+<h2 class="counter">120</h2>
+
+<p>Anak Terbantu</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stats-card">
+
+<div class="stats-icon">
+
+<i class="bi bi-house-heart-fill"></i>
+
+</div>
+
+<h2 class="counter"><%= totalProgram %></h2>
+
+<p>Program Aktif</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TENTANG ================= -->
+
+<section class="about-section" id="tentang">
+
+<div class="container">
+
+<div class="row align-items-center gy-5">
+
+<div class="col-lg-6" data-aos="fade-right">
+
+<img
+
+src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=900&auto=format&fit=crop"
+
+class="img-fluid rounded-4 shadow">
+
+</div>
+
+<div class="col-lg-6" data-aos="fade-left">
+
+<span class="badge-soft">
+
+Tentang Kami
+
+</span>
+
+<h2 class="section-title mt-3">
+
+Panti Asuhan Desa Sumber Asri
+
+</h2>
+
+<p>
+
+Kami merupakan lembaga sosial yang berkomitmen
+memberikan pendidikan, tempat tinggal,
+serta pembinaan karakter bagi anak-anak yatim
+dan dhuafa agar memiliki masa depan yang lebih baik.
+
+</p>
+
+<ul class="list-check">
+
+<li><i class="bi bi-check-circle-fill"></i> Transparansi Donasi</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Program Tepat Sasaran</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Terpercaya Sejak 2008</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Laporan Donasi Lengkap</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROGRAM DONASI ================= -->
+
+<section id="program" class="py-5 bg-light">
+
+<div class="container">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            Program Donasi
+        </h2>
+
+        <p class="text-muted">
+            Mari bersama membantu melalui program-program berikut.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <% if(program.length > 0){ %>
+
+            <% program.forEach(item => { %>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <% if(item.gambar){ %>
+
+                            <img
+                                src="/uploads/<%= item.gambar %>"
+                                  class="card-img-top"
+                                    style="height:220px;object-fit:cover;"
+                                        alt="<%= item.nama_program %>">
+
+                                <% } else { %>
+
+                            <img
+                                 src="https://via.placeholder.com/600x400?text=Program+Donasi"
+                                     class="card-img-top"
+                                        style="height:220px;object-fit:cover;"
+                                         alt="Program Donasi">
+
+                                    <% } %>
+
+                        <div class="card-body">
+
+                            <h5 class="fw-bold">
+                                <%= item.nama_program %>
+                            </h5>
+
+                            <p class="text-muted">
+                                <%= item.deskripsi %>
+                            </p>
+
+                            <small>
+                                Target :
+                                <strong>
+                                    Rp <%= Number(item.target_donasi).toLocaleString('id-ID') %>
+                                </strong>
+                            </small>
+
+                            <br>
+
+                            <small>
+                                Terkumpul :
+                                <strong>
+                                    Rp <%= Number(item.dana_terkumpul).toLocaleString('id-ID') %>
+                                </strong>
+                            </small>
+
+                            <%
+                                let persen = Math.round((item.dana_terkumpul / item.target_donasi) * 100);
+                                if(persen > 100) persen = 100;
+                            %>
+
+                            <div class="progress mt-3">
+
+                                <div
+                                    class="progress-bar bg-success"
+                                    style="width:<%= persen %>%">
+
+                                    <%= persen %>%
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer bg-white border-0">
+
+                            <a href="/donasi" class="btn btn-success w-100">
+
+                                Donasi Sekarang
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+
+        <% }else{ %>
+
+            <div class="col-12 text-center">
+
+                <h5>Belum ada program donasi.</h5>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= TESTIMONI ================= -->
+
+<section id="testimoni" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+Testimoni Donatur
+</h2>
+
+<p class="text-muted">
+Pendapat para donatur mengenai Panti Asuhan Desa Sumber Asri.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<h5 class="fw-bold">
+⭐⭐⭐⭐⭐
+</h5>
+
+<p>
+"Saya sangat senang bisa ikut membantu. Semoga semakin banyak anak-anak yang terbantu."
+</p>
+
+<hr>
+
+<strong>
+Budi Santoso
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<h5 class="fw-bold">
+⭐⭐⭐⭐⭐
+</h5>
+
+<p>
+"Website sangat mudah digunakan dan laporan donasinya transparan."
+</p>
+
+<hr>
+
+<strong>
+Siti Aminah
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<h5 class="fw-bold">
+⭐⭐⭐⭐⭐
+</h5>
+
+<p>
+"Semoga program pendidikan terus berjalan dan semakin banyak anak yang meraih cita-cita."
+</p>
+
+<hr>
+
+<strong>
+Ahmad Fauzi
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="kontak" class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="fw-bold">
+Hubungi Kami
+</h2>
+
+<p class="text-muted">
+Panti Asuhan Desa Sumber Asri
+</p>
+
+<p>
+📍 Desa Sumber Asri
+</p>
+
+<p>
+📞 0812-3456-7890
+</p>
+
+<p>
+✉ info@sumberasri.com
+</p>
+
+</div>
+
+</div>
+
+</section>
+<%- include('../layout/footer') %>
+
